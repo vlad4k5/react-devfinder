@@ -1,0 +1,14 @@
+@import 'fonts';
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: $whiteMilk;
+  color: $black;
+}

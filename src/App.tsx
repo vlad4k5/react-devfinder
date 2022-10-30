@@ -1,10 +1,14 @@
+import AppContainer from './components/AppContainer/AppContainer'
+import Header from './components/Header/Header'
+import './assets/styles/global.scss'
+
 
 
 const App = () => {
   return (
-    <div className="App">
-
-    </div>
+    <AppContainer>
+      <Header />
+    </AppContainer>
   )
 }
 

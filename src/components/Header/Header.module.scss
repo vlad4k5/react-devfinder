@@ -1,0 +1,45 @@
+
+@import '../../assets/styles/variables.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 35px 0;
+
+  .logo {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  .themeSwitcher {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #697C9A;
+    cursor: pointer;
+
+    .themeName {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      transition: .2s;
+    }
+
+    svg {
+      fill: #697C9A;
+      transition: .2s;
+    }
+
+    &:hover {
+      span {
+        color: $darkGray;
+      }
+  
+      svg {
+        fill: $darkGray;
+      }
+    }
+  }
+}
