@@ -17,19 +17,27 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: #697C9A;
     cursor: pointer;
 
     .themeName {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 2.5px;
-      transition: .2s;
+      transition: $transtiotion;
     }
 
     svg {
-      fill: #697C9A;
-      transition: .2s;
+      transition: $transtiotion;
+    }
+  }
+}
+
+body[data-theme="light"] {
+  .themeSwitcher {
+    color: $gray;
+
+    svg {
+      fill: $gray;
     }
 
     &:hover {
@@ -39,6 +47,24 @@
   
       svg {
         fill: $darkGray;
+      }
+    }
+  }
+}
+
+body[data-theme="dark"] {
+  .themeSwitcher {
+    svg {
+      fill: $white;
+    }
+
+    &:hover {
+      span {
+        color: $gray;
+      }
+  
+      svg {
+        fill: $gray;
       }
     }
   }

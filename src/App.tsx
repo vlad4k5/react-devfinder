@@ -3,7 +3,6 @@ import Header from './components/Header/Header'
 import './assets/styles/global.scss'
 
 
-
 const App = () => {
   return (
     <AppContainer>
