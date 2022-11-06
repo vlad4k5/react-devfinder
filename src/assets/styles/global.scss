@@ -9,15 +9,15 @@
 
 body {
   font-family: 'Space Mono', monospace;
-  transition: $transtiotion;
+  transition: $transition;
 }
 
 body[data-theme="light"] {
-  background-color: $whiteMilk;
+  background-color: $whiteBackground;
   color: $black;
 }
 
 body[data-theme="dark"] {
-  background-color: $darkBlue;
+  background-color: $darkBlueBackground;
   color: $white;
 }

@@ -1,0 +1,66 @@
+@import '../../assets/styles/variables.scss';
+
+.searchContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 10px 10px 30px;
+  border-radius: 15px;
+
+  .label {
+    cursor: pointer;
+  }
+
+  .searchInput {
+    margin: 0 20px;
+    padding: 0 10px;
+    flex-grow: 1;
+    height: 60px;
+    max-width: calc(100% - 100px - 20px);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    outline: none;
+    border: none;
+    cursor: text;
+  }
+
+  .searchButton {
+    padding: 12px 24px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $white;
+    background-color: $blue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: $lightBlue;
+    }
+  }
+}
+
+body[data-theme="light"] {
+  .searchContainer {
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    background-color: $white;
+
+    .searchInput {
+      background-color: $white;
+    }
+  }
+}
+
+body[data-theme="dark"] {
+  .searchContainer {
+    box-shadow: none;
+    background-color: $darkBlue;
+
+    .searchInput {
+      background-color: $darkBlue;
+      color: $white;
+    }
+  }
+}
