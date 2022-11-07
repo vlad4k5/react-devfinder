@@ -12,7 +12,8 @@ const App = () => {
   const [user, setUser] = useState<GithubUser | null>(null)
 
   const getUser = async (username: string) => {
-    const searchedUser = await axios.get(`https://api.github.com/users/${username}`) as GithubUser | UserNotFound
+    const res = await axios.get(`https://api.github.com/users/${username}`)
+    const searchedUser: GithubUser | UserNotFound = res.data
     
     if ('login' in searchedUser) {
       setUser(searchedUser)
@@ -29,7 +30,7 @@ const App = () => {
         isUserFound={!!user}
       />
       {
-        user && <UserInfo/> 
+        user && <UserInfo {...user}/> 
       }
     </AppContainer>
   )

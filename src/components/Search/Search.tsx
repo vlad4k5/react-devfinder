@@ -11,6 +11,10 @@ interface SearchProps {
 const Search = ({getUser, isUserFound}: SearchProps) => {
   const [searchValue, setSearchValue] = useState('')
 
+  const findUser = () => {
+    getUser(searchValue)
+  }
+
   return (
     <div className={s.searchContainer}>
       <label className={s.label} htmlFor="search">
@@ -25,7 +29,7 @@ const Search = ({getUser, isUserFound}: SearchProps) => {
         type="text"
         placeholder="Enter GitHub username..."
       />
-      <button className={s.searchButton} onClick={() => getUser(searchValue)}>
+      <button className={s.searchButton} onClick={findUser}>
         Search
       </button>
     </div>
