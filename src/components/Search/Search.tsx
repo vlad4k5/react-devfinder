@@ -1,11 +1,15 @@
+import {useState} from 'react'
 import {ReactComponent as SearchIcon} from '../../assets/img/search.svg'
 import s from './Search.module.scss'
 
-const Search = () => {
+interface SearchProps {
+  getUser: (username: string) => void,
+  isUserFound: boolean
+}
 
-  const findUser = () => {
 
-  }
+const Search = ({getUser, isUserFound}: SearchProps) => {
+  const [searchValue, setSearchValue] = useState('')
 
   return (
     <div className={s.searchContainer}>
@@ -14,12 +18,14 @@ const Search = () => {
       </label>
       <input
         className={s.searchInput} 
+        value={searchValue}
+        onChange={(e) => setSearchValue(e.target.value)}
         autoComplete="off"
         id="search"
         type="text"
         placeholder="Enter GitHub username..."
       />
-      <button className={s.searchButton} onClick={findUser}>
+      <button className={s.searchButton} onClick={() => getUser(searchValue)}>
         Search
       </button>
     </div>
